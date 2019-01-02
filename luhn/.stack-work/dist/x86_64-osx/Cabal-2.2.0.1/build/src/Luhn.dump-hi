@@ -1,0 +1,200 @@
+
+==================== FINAL INTERFACE ====================
+2018-12-31 23:37:48.522345 UTC
+
+interface luhn-1.3.0.6-8RUjk5JtF6J5aTcSlG2RMQ:Luhn 8043
+  interface hash: a6eebe04f33d3c90fe2fc4ec0d7161d0
+  ABI hash: ecb06b8d8b0ae8f2882298c858b446b3
+  export-list hash: f26a394aba55540c7cdb653f635f2870
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 8f52f5e5828eb5661f405d8d9ca450ec
+  opt_hash: 14e536840aca4e889cad654e6f9b79c1
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Luhn.isValid
+module dependencies:
+package dependencies: base-4.11.1.0* ghc-prim-0.5.2.0
+                      integer-gmp-1.0.2.0
+orphans: base-4.11.1.0:GHC.Float base-4.11.1.0:GHC.Base
+family instance modules: base-4.11.1.0:Control.Applicative
+                         base-4.11.1.0:Data.Functor.Const
+                         base-4.11.1.0:Data.Functor.Identity base-4.11.1.0:Data.Monoid
+                         base-4.11.1.0:Data.Semigroup.Internal base-4.11.1.0:GHC.Generics
+                         base-4.11.1.0:GHC.IO.Exception
+import  -/  base-4.11.1.0:Data.Char 3e89818e2b8ef1a2cc5393163484da72
+import  -/  base-4.11.1.0:Data.Foldable 8ed35c38958063956af33c935ea03444
+import  -/  base-4.11.1.0:Data.List 83dc843e47bfc0c5af51e19c6f3476d5
+import  -/  base-4.11.1.0:Data.OldList 1b35aa3c6805ff7c8887a35a866fe006
+import  -/  base-4.11.1.0:Data.Tuple 3af66f3ac61ed95ba8a3a3f68ebc5003
+import  -/  base-4.11.1.0:GHC.Base 604111500e81281298777e721c75643b
+import  -/  base-4.11.1.0:GHC.List 1e4357702d8d00cded0703bd293e50e8
+import  -/  base-4.11.1.0:GHC.Num 8e54b26dce4495382dc4b50cf36ab754
+import  -/  base-4.11.1.0:GHC.Real b4beb0389ba1ad5d9640aae67848c5d3
+import  -/  base-4.11.1.0:GHC.Unicode 8234c40b59f035e845832a42e8725a00
+import  -/  base-4.11.1.0:Prelude 0750c25585e2b797cd78291d423d39dd
+import  -/  ghc-prim-0.5.2.0:GHC.Classes 122abfcd7450c6c11602933c9ca5f80d
+adf6e6c6a37fd83bcc5a4fc898751bcb
+  $seven1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (0) -}
+101c392a83b9bc9cf080fac6abcc9167
+  $seven2 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (2) -}
+38aa2bdd5d3db78c51bb388ead64f0e1
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Luhn.$trModule3 Luhn.$trModule1) -}
+cdd97efb8d6005bf90cd16e9ea2ef64a
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Luhn.$trModule2) -}
+0a7ebb211615716808a27a8740d2f179
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Luhn"#) -}
+08973bf8ab73dff62f1c9f07ffa907fd
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Luhn.$trModule4) -}
+070c95e36c849b09889ec6c6fee97daf
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("luhn-1.3.0.6-8RUjk5JtF6J5aTcSlG2RMQ"#) -}
+61ebabd59e60b60b45c0b3e52295da85
+  $wgo ::
+    [(GHC.Integer.Type.Integer, GHC.Types.Int)]
+    -> (# [GHC.Integer.Type.Integer], [GHC.Types.Int] #)
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>, Inline: [0] -}
+a2e08e7f71af1aa62fdf3765cf7bbf17
+  $wgo1 ::
+    GHC.Integer.Type.Integer
+    -> [GHC.Types.Int]
+    -> (# [(GHC.Integer.Type.Integer, GHC.Types.Int)],
+          [(GHC.Integer.Type.Integer, GHC.Types.Int)] #)
+  {- Arity: 2, Strictness: <S,1*U><S,1*U>, Inline: [0] -}
+111766153e23f736255c186cde23db2a
+  $wlvl :: GHC.Prim.Char# -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Char#) ->
+                 let {
+                   x :: GHC.Prim.Word# = GHC.Prim.int2Word# (GHC.Prim.ord# ww)
+                 } in
+                 case GHC.Prim.leWord# x 887## of lwild {
+                   DEFAULT
+                   -> case {__pkg_ccall base-4.11.1.0 GHC.Prim.Int#
+                                                      -> GHC.Prim.State# GHC.Prim.RealWorld
+                                                      -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                                            GHC.Prim.Int# #)}
+                             (GHC.Prim.ord# ww)
+                             GHC.Prim.realWorld# of wild { (#,#) ds ds1 ->
+                      case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False 0# -> GHC.Types.True } }
+                   1#
+                   -> case x of wild {
+                        DEFAULT
+                        -> case GHC.Prim.leWord#
+                                  (GHC.Prim.minusWord# wild 9##)
+                                  4## of lwild1 {
+                             DEFAULT
+                             -> case wild of wild1 {
+                                  DEFAULT -> GHC.Types.True 160## -> GHC.Types.False }
+                             1# -> GHC.Types.False }
+                        32## -> GHC.Types.False } }) -}
+6839763f066d94ed9f4ddafe6d22853f
+  isValid :: GHC.Base.String -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (n :: GHC.Base.String) ->
+                 let {
+                   spaceRemoved :: [GHC.Types.Char]
+                   = GHC.List.filter @ GHC.Types.Char Luhn.isValid1 n
+                 } in
+                 case GHC.List.$wlenAcc
+                        @ GHC.Types.Char
+                        spaceRemoved
+                        0# of ww2 { DEFAULT ->
+                 case GHC.Prim.># ww2 1# of lwild {
+                   DEFAULT -> GHC.Types.False
+                   1#
+                   -> let {
+                        $j :: GHC.Types.Bool <join 0>
+                        = case Luhn.$wgo1
+                                 Luhn.$seven1
+                                 (GHC.Base.map
+                                    @ GHC.Types.Char
+                                    @ GHC.Types.Int
+                                    Data.Char.digitToInt
+                                    (GHC.List.reverse1
+                                       @ GHC.Types.Char
+                                       spaceRemoved
+                                       (GHC.Types.[] @ GHC.Types.Char))) of ww { (#,#) ww1 ww3 ->
+                          case Luhn.$wgo ww1 of ww4 { (#,#) ww5 ww6 ->
+                          let {
+                            $j1 :: GHC.Prim.Int# -> GHC.Types.Bool
+                              <join 1> {- Arity: 1, Strictness: <S,U> -}
+                            = \ (x :: GHC.Prim.Int#)[OneShot] ->
+                              case Luhn.$wgo ww3 of ww7 { (#,#) ww8 ww9 ->
+                              let {
+                                $j2 :: GHC.Prim.Int# -> GHC.Types.Bool
+                                  <join 1> {- Arity: 1, Strictness: <S,U> -}
+                                = \ (y :: GHC.Prim.Int#)[OneShot] ->
+                                  case GHC.Prim.remInt# (GHC.Prim.+# x y) 10# of wild {
+                                    DEFAULT -> GHC.Types.False 0# -> GHC.Types.True }
+                              } in
+                              letrec {
+                                $wgo2 :: [GHC.Types.Int] -> GHC.Prim.Int# -> GHC.Types.Bool
+                                  <join 2> {- Arity: 2, Strictness: <S,1*U><S,U>, Inline: [0] -}
+                                = \ (w :: [GHC.Types.Int]) (ww10 :: GHC.Prim.Int#) ->
+                                  case w of wild {
+                                    [] -> $j2 ww10
+                                    : y ys
+                                    -> case y of wild1 { GHC.Types.I# y1 ->
+                                       $wgo2 ys (GHC.Prim.+# ww10 y1) } }
+                              } in
+                              $wgo2 ww9 0# }
+                          } in
+                          letrec {
+                            $wgo2 :: [GHC.Types.Int] -> GHC.Prim.Int# -> GHC.Types.Bool
+                              <join 2> {- Arity: 2, Strictness: <S,1*U><S,U>, Inline: [0] -}
+                            = \ (w :: [GHC.Types.Int]) (ww7 :: GHC.Prim.Int#) ->
+                              case w of wild {
+                                [] -> $j1 ww7
+                                : y ys
+                                -> case y of wild1 { GHC.Types.I# y1 ->
+                                   let {
+                                     x :: GHC.Prim.Int# = GHC.Prim.*# 2# y1
+                                   } in
+                                   case GHC.Prim.># x 9# of lwild1 {
+                                     DEFAULT -> $wgo2 ys (GHC.Prim.+# ww7 x)
+                                     1# -> $wgo2 ys (GHC.Prim.+# ww7 (GHC.Prim.-# x 9#)) } } }
+                          } in
+                          $wgo2 ww6 0# } }
+                      } in
+                      letrec {
+                        go :: [GHC.Types.Char] -> GHC.Types.Bool
+                          <join 1> {- Arity: 1, Strictness: <S,1*U> -}
+                        = \ (ds :: [GHC.Types.Char]) ->
+                          case ds of wild {
+                            [] -> $j
+                            : y ys
+                            -> case y of wild1 { GHC.Types.C# c# ->
+                               case GHC.Prim.leWord#
+                                      (GHC.Prim.int2Word# (GHC.Prim.-# (GHC.Prim.ord# c#) 48#))
+                                      9## of lwild1 {
+                                 DEFAULT -> GHC.Types.False 1# -> go ys } } }
+                      } in
+                      go spaceRemoved } }) -}
+62d66e943ee91433f5c928a6d5b6decc
+  isValid1 :: GHC.Types.Char -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(U)>, Inline: [0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: GHC.Types.Char) ->
+                 case w of ww { GHC.Types.C# ww1 -> Luhn.$wlvl ww1 }) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
