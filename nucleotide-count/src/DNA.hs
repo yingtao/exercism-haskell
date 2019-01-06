@@ -9,11 +9,10 @@ import qualified Data.Map.Strict as SM
 data Nucleotide = A | C | G | T deriving (Eq, Ord, Show, Enum, Bounded, Read)
 
 nucleotideCounts :: String -> Either String (Map Nucleotide Int)
-nucleotideCounts xs = foldl merge (Right $ SM.fromList [(x,0)| x <- [minBound .. maxBound]]) xs
+nucleotideCounts xs = foldM merge (SM.fromList [(x,0)| x <- [minBound .. maxBound]]) xs
 
-merge :: Either String (Map Nucleotide Int) -> Char -> Either String (Map Nucleotide Int)
+merge :: Map Nucleotide Int -> Char -> Either String (Map Nucleotide Int)
 merge cur char = case readEither [char] of
     Left e -> Left e
-    Right a -> case cur of
-        Right m -> Right $ SM.adjust (+1) a m
-        Left e' -> Left e'
+    Right a -> Right $ SM.adjust (+1) a cur
+        
