@@ -13,6 +13,6 @@ nucleotideCounts xs = foldM merge (SM.fromList [(x,0)| x <- [minBound .. maxBoun
 
 merge :: Map Nucleotide Int -> Char -> Either String (Map Nucleotide Int)
 merge cur char = case readEither [char] of
-    Left e -> Left e
+    Left  e -> Left e
     Right a -> Right $ SM.adjust (+1) a cur
         
