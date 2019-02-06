@@ -10,14 +10,18 @@ data Planet = Mercury
             | Neptune
 
 ageOn :: Planet -> Float -> Float
-ageOn planet seconds = case planet of
-    Mercury -> seconds / (earthyearseconds * 0.2408467)
-    Venus   -> seconds / (earthyearseconds * 0.61519726)
-    Earth   -> seconds / earthyearseconds
-    Mars    -> seconds / (earthyearseconds * 1.8808158)
-    Jupiter -> seconds / (earthyearseconds * 11.862615)
-    Saturn  -> seconds / (earthyearseconds * 29.447498)
-    Uranus  -> seconds / (earthyearseconds * 84.016846)
-    Neptune -> seconds / (earthyearseconds * 164.79132)
+ageOn planet seconds = seconds / (earthYearSeconds * (orbitalPeriodRatio planet))
 
-    where earthyearseconds = 31557600
+earthYearSeconds :: Float
+earthYearSeconds = 31557600
+
+orbitalPeriodRatio :: Planet -> Float
+orbitalPeriodRatio a = case a of
+    Mercury -> 0.2408467
+    Venus   -> 0.61519726
+    Earth   -> 1.0
+    Mars    -> 1.8808158
+    Jupiter -> 11.862615
+    Saturn  -> 29.447498
+    Uranus  -> 84.016846
+    Neptune -> 164.79132
